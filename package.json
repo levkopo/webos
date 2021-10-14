@@ -1,0 +1,14 @@
+{
+  "name": "webos",
+  "main": "index.html",
+  "type": "commonjs",
+  "window": {
+    "toolbar": false,
+    "width": 660,
+    "height": 500,
+    "kiosk": true
+  },
+  "scripts": {
+    "start": "nw ."
+  }
+}

@@ -1,0 +1,1 @@
+app = ({ println }, args) => eval(args)
