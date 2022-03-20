@@ -21,7 +21,7 @@ createFile("/bin/echo", await (await fetch("packages/echo.js")).arrayBuffer())
 createFile("/bin/wui", await (await fetch("packages/wui.js")).arrayBuffer())
 createFile("/wallpaper.png", await (await fetch("wallpaper.png")).arrayBuffer())
 
-setTimeout(async () => executeFile("/bin/wui"))
+setTimeout(async () => executeFile("/bin/sh"))
 
 function createFile(path, content = new ArrayBuffer(0)) {
     localStorage.setItem(path, JSON.stringify({
