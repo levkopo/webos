@@ -41,7 +41,10 @@ app = async ({ println }, args) => {
                 title: windows[currentWindow]?.info?.title||"WebOS"
             })
 
-            const wallpaper = getFileContentArrayBuffer("/wallpaper.png")
+            let wallpaper = 'black';
+            try {
+                wallpaper = "url('"+ await Base64.encodeArrayBuffer(getFileContentArrayBuffer("/wallpaper.png")) +"') no-repeat center";
+            }catch(e) {}
 
             view.draw(`
                 <div style="
